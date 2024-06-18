@@ -1,24 +1,28 @@
 ---
 title: Metropolis Beamer Theme for Revealjs
 subtitle: A theme inspired by [beamer metropolis theme](https://www.overleaf.com/latex/templates/metropolis-beamer-theme/qzyvdhrntfmr)
-format: 
-  metropolis-beamer-revealjs: default
-    # theme: style.scss
-header-logo: images/rstudio.png
-header-logo-link: "https://posit.co/"
-slide-number: "c"
-author:
-  - name: Author X
-    orcid: 0000-0000-0000-0000
-    email: author.x@email.com
-    affiliations: Institution X
-  - name: Author Y
-    orcid: 0000-0000-0000-0001
-    email: author.y@email.com
-    affiliations: Institution Y
 date: last-modified
-bibliography: references.bib
+date-format: "MMMM DD, YYYY"
+author:
+  - name: Danilo Freire
+    orcid: 0000-0002-4712-6810
+    email: danilo.freire@emory.edu
+    affiliations: Emory University
+format: 
+  metropolis-beamer-revealjs: 
+    theme: style.scss
+    self-contained: true
+header-logo: images/rstudio.png
+header-logo-link: "https://www.rstudio.com/"
+slide-number: "c/t"
 embed-resources: true
+bibliography: references.bib
+transition: slide
+transition-speed: default
+scrollable: true
+engine: knitr
+editor:
+  render-on-save: true
 ---
 
 # Components 
