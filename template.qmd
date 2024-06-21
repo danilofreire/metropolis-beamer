@@ -12,8 +12,8 @@ format:
   metropolis-beamer-revealjs: 
     theme: style.scss
     self-contained: true
-header-logo: images/rstudio.png
-header-logo-link: "https://www.rstudio.com/"
+header-logo: images/qtm-icon.png
+header-logo-link: "https://qtm.emory.edu/"
 slide-number: "c/t"
 embed-resources: true
 bibliography: references.bib
@@ -21,6 +21,7 @@ transition: slide
 transition-speed: default
 scrollable: true
 engine: knitr
+from: markdown+emoji
 editor:
   render-on-save: true
 ---
@@ -171,7 +172,7 @@ For details of @tbl-co2, check by running `?CO2` in R console.
 ## Absolute positioning
 
 ![](images/picsum.png){.absolute top=200 left=0 width="350" height="300"}
-![](images/picsum.png){.absolute top=0 right=0 width="350" height="300"}
+![](images/picsum.png){.absolute top=50 right=0 width="350" height="300"}
 
 ## Slide with a pause
 
@@ -180,6 +181,15 @@ content before the pause
 . . .
 
 content after the pause
+
+::: {.incremental}
+- This is the first incremental bullet point
+- This is the second incremental bullet point
+:::
+
+::: {.footer}
+This is a footer.
+:::
 
 ## Text that will fit the slide
 
