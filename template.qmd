@@ -48,9 +48,19 @@ To emphasize specific words or text, you can:
 
 ## Components
 
-### Blockquotes
+### Blockquotes, small fonts and asides
 
-> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vel rhoncus ante. Donec vitae euismod nibh. In ultrices vestibulum erat, non maximus orci elementum in. Ut eget erat et felis consequat volutpat. Donec ac iaculis justo. Phasellus vitae mi tempor leo scelerisque consequat sed at nibh.
+> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vel rhoncus ante. Donec vitae euismod nibh. In ultrices vestibulum erat, non maximus orci elementum in. Ut eget erat et felis consequat volutpat. Donec ac iaculis justo. Phasellus vitae mi tempor leo scelerisque consequat sed at nibh. 
+
+<br>
+
+::: {style="font-size: 16px;"}
+This line uses a smaller font in a `<div>` environment.
+:::
+
+::: aside
+Some additional commentary of more peripheral interest.
+:::
 
 ## Components
 
@@ -60,7 +70,7 @@ To emphasize specific words or text, you can:
 
 2. @R-rmarkdown
 
-3. @R-quarto
+3. @R-quarto 
 
 # Callout Blocks
 
@@ -156,6 +166,82 @@ For details of @tbl-co2, check by running `?CO2` in R console.
 ## Images
 
 ![Random Image from Picsum](images/picsum.png)
+
+
+## Absolute positioning
+
+![](images/picsum.png){.absolute top=200 left=0 width="350" height="300"}
+![](images/picsum.png){.absolute top=0 right=0 width="350" height="300"}
+
+## Slide with a pause
+
+content before the pause
+
+. . .
+
+content after the pause
+
+## Text that will fit the slide
+
+::: {.r-fit-text}
+Big Text
+:::
+
+## {auto-animate=true}
+
+::: {style="margin-top: 100px;"}
+Animating content
+:::
+
+## {auto-animate=true}
+
+::: {style="margin-top: 200px; font-size: 3em; color: red;"}
+Animating content
+:::
+
+## Code animations {auto-animate="true"}
+
+```r
+# Fill in the spot we created for a plot
+output$phonePlot <- renderPlot({
+  # Render a barplot
+})
+```
+
+## Code animations {auto-animate=true}
+
+```r
+# Fill in the spot we created for a plot
+output$phonePlot <- renderPlot({
+  # Render a barplot
+  barplot(WorldPhones[,input$region]*1000, 
+          main=input$region,
+          ylab="Number of Telephones",
+          xlab="Year")
+})
+```
+
+## Fragments
+
+::: {.fragment}
+Fade in
+:::
+
+::: {.fragment .fade-out}
+Fade out
+:::
+
+::: {.fragment .highlight-red}
+Highlight red
+:::
+
+::: {.fragment .fade-in-then-out}
+Fade in, then out
+:::
+
+::: {.fragment .fade-up}
+Slide up while fading in
+:::
 
 ## References
 

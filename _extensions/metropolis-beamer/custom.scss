@@ -22,7 +22,8 @@ $primary-color: #23373b !default;
 $secondary-color: #EB811B !default;
 $body-fg-color: #33474b !default;
 $alert-color: #9c162a !default;
-$example-color: #14B03D !default;
+// $example-color: #14B03D !default;
+$example-color: $secondary-color !default;
 $body-bg: #f1f1f1 !default;
 $body-color: $body-fg-color !default; 
 
@@ -229,12 +230,14 @@ $authors-block-gap: 4em !default;
   
   .footer,
   .slide-number {
-    color: #604c38;
+    // color: #604c38;
+    color: $primary-color;
   }
   
   .slide aside {
     bottom: 250px ;
-    color: #604c38;
+    // color: #604c38;
+    color: $primary-color;
   }
   
   section[data-background-image] {
@@ -252,7 +255,7 @@ $authors-block-gap: 4em !default;
   
   .progress {
 	  background-color: transparent;
-	  color: $secondary-color;
+	  color: $primary-color;
   }
   
   // tables
@@ -322,4 +325,10 @@ div[type="alert"] {
   div.callout-note.callout-style-default .callout-title {
      color: $alert-color;
   }
+}
+
+.reveal .footnotes {
+  position: absolute;
+  bottom: 0;
+  left: 0;
 }
